@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Minecraft 3D Maze</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -25,11 +25,11 @@
     <div id="info-bar" style="display: none;">Time: 0.0s</div>
     
     <div id="day-night-toggle" style="display: none;">
-        <img id="sun-icon" src="https://raw.githubusercontent.com/imsahil37/pixel/main/sun.png" alt="Switch to Day Mode" style="display:none;">
-        <img id="moon-icon" src="https://raw.githubusercontent.com/imsahil37/pixel/main/night.png" alt="Switch to Night Mode">
+        <img id="sun-icon" src="assets/textures/sun.png" alt="Switch to Day Mode" style="display:none;">
+        <img id="moon-icon" src="assets/textures/moon.png" alt="Switch to Night Mode">
     </div>
 
-    <div id="win-modal">
+    <div id="win-modal" style="display: none;">
         <div class="modal-content">
             <h2>You Escaped!</h2>
             <p id="win-time"></p>
@@ -37,18 +37,22 @@
         </div>
     </div>
     
-    <audio id="running-audio" src="https://raw.githubusercontent.com/imsahil37/pixel/main/running.mp3" loop></audio>
-    <audio id="night-audio" src="https://raw.githubusercontent.com/imsahil37/pixel/main/night_crickets.mp3" loop></audio>
-    <audio id="victory-audio" src="https://raw.githubusercontent.com/imsahil37/pixel/main/victory.mp3"></audio>
-    <audio id="jump-audio" src="https://raw.githubusercontent.com/imsahil37/pixel/main/jump.mp3"></audio>
-    <audio id="rain-audio" src="https://raw.githubusercontent.com/imsahil37/pixel/main/rain.mp3" loop></audio>
+    <audio id="running-audio" src="assets/audio/running.mp3" loop></audio>
+    <audio id="night-audio" src="assets/audio/night_crickets.mp3" loop></audio>
+    <audio id="victory-audio" src="assets/audio/victory.mp3"></audio>
+    <audio id="jump-audio" src="assets/audio/jump.mp3"></audio>
+    <audio id="rain-audio" src="assets/audio/rain.mp3" loop></audio>
 
 
+    <!-- Third-party libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/PointerLockControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
     
-    <script type="module" src="main.js"></script>
+    <!-- Game Logic Script -->
+    <script src="main.js"></script>
+
 </body>
 </html>
+
 

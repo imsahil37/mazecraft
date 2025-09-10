@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #4ade80;
+    --bg-color: #1a1a1a;
+
+    /* MINECRAFT UI COLORS */
+    --mc-bg: rgba(10, 10, 10, 0.75);
+    --mc-border-dark: #292929;
+    --mc-border-light: #616161;
+    --mc-button-bg: #808080;
+    --mc-button-border-light: #B4B4B4;
+    --mc-button-border-dark: #505050;
+    --mc-text-shadow: #3f3f3f;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+}
+
+#blocker, #win-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    top: 0;
+    left: 0;
+}
+
+#instructions, .modal-content {
+    background-color: var(--mc-bg);
+    border: 3px solid var(--mc-border-dark);
+    box-shadow: inset 0 0 0 3px var(--mc-border-light);
+    width: 70%;
+    max-width: 550px;
+    padding: 30px 40px; /* Increased padding slightly for better spacing */
+    text-align: center;
+    
+    /* --- VERTICAL CENTERING FIX --- */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* ----------------------------- */
+}
+
+#instructions h1, .modal-content h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--primary-color);
+    text-shadow: 4px 4px 0px var(--mc-text-shadow);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+#instructions p, .modal-content p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    line-height: 1.8;
+    color: #E0E0E0;
+    text-shadow: 2px 2px 0px var(--mc-text-shadow);
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--mc-button-bg);
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px var(--mc-text-shadow);
+    
+    border: 3px solid;
+    border-color: var(--mc-button-border-light) var(--mc-button-border-dark) var(--mc-button-border-dark) var(--mc-button-border-light);
+    
+    transition: background-color 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #919191;
+}
+
+.modal-content button:active {
+    border-color: var(--mc-button-border-dark) var(--mc-button-border-light) var(--mc-button-border-light) var(--mc-button-border-dark);
+    background-color: #707070;
+}
+
+#info-bar {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 3px 3px 0px var(--mc-text-shadow);
+    padding: 10px 15px;
+    
+    background-color: var(--mc-bg);
+    border: 3px solid var(--mc-border-dark);
+    box-shadow: inset 0 0 0 3px var(--mc-border-light);
+}
+
+#crosshair {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    border-radius: 50%;
+}
+
+#day-night-toggle {
+    position: absolute;
+    z-index: 25;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#day-night-toggle img {
+    width: 35px;
+    height: 35px;
+    image-rendering: pixelated;
+}

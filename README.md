@@ -2,7 +2,7 @@
 
 An immersive 3D maze game with procedurally generated levels and a beautifully synchronized day/night cycle, all wrapped in a classic blocky aesthetic.
 
-![Mazecraft Screenshot](mazecraft.png)
+![Mazecraft Gameplay](gameplay.gif)
 
 ## ✨ Core Features
 
